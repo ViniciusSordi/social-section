@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --darkmagenta: hsl(300, 43%, 22%);
+    --softpink: hsl(333, 80%, 67%);
+    --darkgraymagenta: hsl(303, 10%, 53%);
+    --lightgraymagenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.container {
+    padding-top: 130px;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+    margin: 20px;
+}
+
+.title {
+    max-width: 600px;
+}
+
+.starsbox {
+    grid-column: 2 / -1;
+    justify-self: end
+}
+
+.title h1 {
+    max-width: 300px;
+    font-weight: 700;
+    font-size: 3em;
+    color: var(--darkmagenta);
+    padding: 10px;
+}
+
+.title p {
+    max-width: 360px;
+    color: var(--darkgraymagenta);
+    padding: 10px;
+    line-height: 1.2em;
+}
+
+.stars {
+    background-color: var(--lightgraymagenta);
+    border-radius: 12px;
+    margin: 20px;
+    padding: 18px;
+    grid-column: 2 / 2;
+}
+
+.stars p {
+    display: inline-block;
+    color: var(--darkmagenta);
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 700;
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+.stars img {
+    padding: 2px;
+}
+
+.leftstar {
+    margin-left: 12px;
+}
+
+.two {
+    margin-left: 70px;
+}
+
+.three {
+    margin-left: 120px;
+}
+
+.review {
+    max-width: 300px;
+    background-color: var(--darkmagenta);
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.reviewmid {
+    margin-top: 60px;
+    margin-bottom: -20px;
+}
+
+.reviewright {
+    margin-top: 78px;
+    margin-bottom: -38px;
+}
+
+.avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    margin-right: 30px;
+}
+
+.user {
+    display: flex;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.user span {
+    color: var(--softpink);
+    font-weight: 400;
+}
+
+.txt {
+    color: var(--lightgraymagenta);
+    line-height: 1.3em;
+    padding-top: 28px;
+    max-width: 265px;
+}
+
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding-top: 20px;
+    }
+    .starsbox {
+        grid-column: auto;
+    }
+    .stars{
+        margin-left: 0px;
+    }
+    .review {
+        justify-self: center;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    .title {
+        max-width: 350px;
+    }
+    .stars p {
+        display: block;
+        padding-right: 10px;
+    }
+    .starsbox {
+        justify-self: center;
+    }
+    .leftstar {
+        margin-left: 50px;
+    }
+}
+
